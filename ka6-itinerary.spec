@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	24.05.0
+%define		kdeappsver	24.05.1
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		itinerary
 Summary:	Itinerary and boarding pass management application
 Name:		ka6-%{kaname}
-Version:	24.05.0
+Version:	24.05.1
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	9d10234413db4ce121f39b0c3a8cdb24
+# Source0-md5:	7a133255a7ce41a88e1bae91e744d2e1
 URL:		https://community.kde.org/
 BuildRequires:	Qt6DBus-devel >= 5.15.2
 BuildRequires:	Qt6Gui-devel >= 5.15.2
@@ -65,6 +65,7 @@ BuildRequires:	shared-mime-info >= 1.0
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
 BuildRequires:	zlib-devel
+Obsoletes:	ka5-%{kaname} < %{version}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
