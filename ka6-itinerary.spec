@@ -104,6 +104,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libSolidExtras.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kfilemetadata/kfilemetadata_itineraryextractor.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/kf6/thumbcreator/itinerarythumbnail.so
+%dir %{_libdir}/qt6/qml/org/kde/solidextras
 %attr(755,root,root) %{_libdir}/qt6/qml/org/kde/solidextras/libsolidextrasqmlplugin.so
 %{_libdir}/qt6/qml/org/kde/solidextras/qmldir
 %{_desktopdir}/org.kde.itinerary.desktop
