@@ -1,11 +1,13 @@
 #
 # Conditional build:
-%bcond_with	tests		# build with tests
+%bcond_with	tests		# test suite
+
 %define		kdeappsver	24.08.2
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		itinerary
 Summary:	Itinerary and boarding pass management application
+Summary(pl.UTF-8):	Aplikacja do zarządzania trasami i kartami pokładowymi
 Name:		ka6-%{kaname}
 Version:	24.08.2
 Release:	2
@@ -13,7 +15,7 @@ License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
 # Source0-md5:	6c8babdd9e4534a14896d5e8cc8ac45d
-URL:		https://community.kde.org/
+URL:		https://apps.kde.org/itinerary/
 BuildRequires:	Qt6DBus-devel >= 5.15.2
 BuildRequires:	Qt6Gui-devel >= 5.15.2
 BuildRequires:	Qt6Location-devel
@@ -65,11 +67,14 @@ BuildRequires:	shared-mime-info >= 1.0
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
 BuildRequires:	zlib-devel
-Obsoletes:	ka5-%{kaname} < %{version}
+Obsoletes:	ka5-itinerary < 24
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Itinerary and boarding pass management application.
+
+%description -l pl.UTF-8
+Aplikacja do zarządzania trasami i kartami pokładowymi.
 
 %prep
 %setup -q -n %{kaname}-%{version}
@@ -81,18 +86,19 @@ Itinerary and boarding pass management application.
 	%{!?with_tests:-DBUILD_TESTING=OFF} \
 	-DKDE_INSTALL_DOCBUNDLEDIR=%{_kdedocdir} \
 	-DKDE_INSTALL_USE_QT_SYS_PATHS=ON
+
 %ninja_build -C build
 
 %if %{with tests}
 ctest --test-dir build
 %endif
 
-
 %install
 rm -rf $RPM_BUILD_ROOT
+
 %ninja_install -C build
 
-%find_lang %{kaname} --all-name --with-kde
+%find_lang %{kaname} --all-name
 
 %clean
 rm -rf $RPM_BUILD_ROOT
