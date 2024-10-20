@@ -47,6 +47,7 @@ BuildRequires:	kf6-kdbusaddons-devel >= 5.88
 BuildRequires:	kf6-kholidays-devel >= 5.88
 BuildRequires:	kf6-ki18n-devel >= 5.93.0
 BuildRequires:	kf6-kio-devel >= 5.88
+BuildRequires:	kf6-kirigami-addons-devel >= 0.9
 BuildRequires:	kf6-kitemviews-devel >= 5.93.0
 BuildRequires:	kf6-kjobwidgets-devel >= 5.93.0
 BuildRequires:	kf6-knotifications-devel >= 5.88
@@ -56,7 +57,6 @@ BuildRequires:	kf6-kwidgetsaddons-devel >= 5.93.0
 BuildRequires:	kf6-kxmlgui-devel >= 5.93.0
 BuildRequires:	kf6-networkmanager-qt-devel >= 5.88
 BuildRequires:	kf6-qqc2-desktop-style-devel >= 5.88
-BuildRequires:	kirigami-addons-devel >= 0.9
 BuildRequires:	ninja
 BuildRequires:	pkgconfig
 BuildRequires:	qt6-build >= %{qtver}
