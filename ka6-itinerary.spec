@@ -62,7 +62,7 @@ BuildRequires:	kf6-qqc2-desktop-style-devel >= 5.88
 BuildRequires:	ninja
 BuildRequires:	pkgconfig
 BuildRequires:	qt6-build >= %{qtver}
-BuildRequires:	rpmbuild(macros) >= 1.605
+BuildRequires:	rpmbuild(macros) >= 1.736
 BuildRequires:	shared-mime-info >= 1.0
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
