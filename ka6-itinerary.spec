@@ -2,19 +2,19 @@
 # Conditional build:
 %bcond_with	tests		# test suite
 
-%define		kdeappsver	24.08.3
+%define		kdeappsver	24.12.0
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		itinerary
 Summary:	Itinerary and boarding pass management application
 Summary(pl.UTF-8):	Aplikacja do zarządzania trasami i kartami pokładowymi
 Name:		ka6-%{kaname}
-Version:	24.08.3
+Version:	24.12.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	9957048b59402f9375f3c6300369e5fc
+# Source0-md5:	8a644e0b9cffedb01fc94b9d1102e4b9
 URL:		https://apps.kde.org/itinerary/
 BuildRequires:	Qt6DBus-devel >= 5.15.2
 BuildRequires:	Qt6Gui-devel >= 5.15.2
@@ -49,7 +49,7 @@ BuildRequires:	kf6-kdbusaddons-devel >= 5.88
 BuildRequires:	kf6-kholidays-devel >= 5.88
 BuildRequires:	kf6-ki18n-devel >= 5.93.0
 BuildRequires:	kf6-kio-devel >= 5.88
-BuildRequires:	kf6-kirigami-addons-devel >= 0.9
+BuildRequires:	kf6-kirigami-addons-devel >= 1.5.0
 BuildRequires:	kf6-kitemviews-devel >= 5.93.0
 BuildRequires:	kf6-kjobwidgets-devel >= 5.93.0
 BuildRequires:	kf6-knotifications-devel >= 5.88
@@ -59,6 +59,7 @@ BuildRequires:	kf6-kwidgetsaddons-devel >= 5.93.0
 BuildRequires:	kf6-kxmlgui-devel >= 5.93.0
 BuildRequires:	kf6-networkmanager-qt-devel >= 5.88
 BuildRequires:	kf6-qqc2-desktop-style-devel >= 5.88
+BuildRequires:	libQuotient-qt6-devel >= 0.9.0
 BuildRequires:	ninja
 BuildRequires:	pkgconfig
 BuildRequires:	qt6-build >= %{qtver}
