@@ -2,19 +2,19 @@
 # Conditional build:
 %bcond_with	tests		# test suite
 
-%define		kdeappsver	25.12.3
+%define		kdeappsver	26.04.0
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		itinerary
 Summary:	Itinerary and boarding pass management application
 Summary(pl.UTF-8):	Aplikacja do zarządzania trasami i kartami pokładowymi
 Name:		ka6-%{kaname}
-Version:	25.12.3
-Release:	2
+Version:	26.04.0
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	ca1bf25c636fa698829f2919a054f313
+# Source0-md5:	40f2d327d925d12bbff673002d172fd5
 URL:		https://apps.kde.org/itinerary/
 BuildRequires:	Qt6DBus-devel >= 5.15.2
 BuildRequires:	Qt6Gui-devel >= 5.15.2
@@ -116,12 +116,8 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README.md
 %attr(755,root,root) %{_bindir}/itinerary
-%{_libdir}/libSolidExtras.so
 %{_libdir}/qt6/plugins/kf6/kfilemetadata/kfilemetadata_itineraryextractor.so
 %{_libdir}/qt6/plugins/kf6/thumbcreator/itinerarythumbnail.so
-%dir %{_libdir}/qt6/qml/org/kde/solidextras
-%{_libdir}/qt6/qml/org/kde/solidextras/libsolidextrasqmlplugin.so
-%{_libdir}/qt6/qml/org/kde/solidextras/qmldir
 %{_desktopdir}/org.kde.itinerary.desktop
 %{_iconsdir}/hicolor/scalable/apps/org.kde.itinerary.svg
 %{_datadir}/knotifications6/itinerary.notifyrc
